@@ -1,0 +1,803 @@
+[
+    {
+        "id": "656ec99066bb254b",
+        "type": "tab",
+        "label": "Flux 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4b9c9ffc1728b8ff",
+        "type": "serial-port",
+        "name": "Serial_Read",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "cc1a59605d3801d2",
+        "type": "ui_tab",
+        "name": "Affichage Local",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5140d254fcb3bedf",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "64a604739ca1d9d6",
+        "type": "ui_group",
+        "name": "Données en Direct",
+        "tab": "cc1a59605d3801d2",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4490e284b68b680c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "eu1.cloud.thethings.network",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "44ab74629e9534db",
+        "type": "ui_tab",
+        "name": "HR",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3c365863555bdf62",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "44ab74629e9534db",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8c51400d8db2d38c",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "project",
+        "tz": "+1",
+        "charset": "UTF8"
+    },
+    {
+        "id": "f1e03b8deceb5b49",
+        "type": "ui_group",
+        "name": "Données Historisées",
+        "tab": "cc1a59605d3801d2",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0816d45aa340c306",
+        "type": "serial in",
+        "z": "656ec99066bb254b",
+        "name": "",
+        "serial": "4b9c9ffc1728b8ff",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "5fdbfa6f7480819f"
+            ]
+        ]
+    },
+    {
+        "id": "5fdbfa6f7480819f",
+        "type": "function",
+        "z": "656ec99066bb254b",
+        "name": "get_hr_value",
+        "func": "var live = {};\n//var buf = (msg.payload).split('.')[0];\nvar buf = msg.payload;\nlive.payload = parseInt(buf);\nif (Number.isNaN(live.payload)){\n    return null;\n}\nelse{\n    return live;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 320,
+        "wires": [
+            [
+                "3e0bce82a757aa57",
+                "3601f308a0ae09aa",
+                "66f14218d9c02ad2"
+            ]
+        ]
+    },
+    {
+        "id": "be658a05daafe394",
+        "type": "ui_chart",
+        "z": "656ec99066bb254b",
+        "name": "",
+        "group": "f1e03b8deceb5b49",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "label": "Historique",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "180",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#dc8add",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1640,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e9fda50546c80eb3",
+        "type": "mysql",
+        "z": "656ec99066bb254b",
+        "mydb": "8c51400d8db2d38c",
+        "name": "db_conn",
+        "x": 920,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e0bce82a757aa57",
+        "type": "function",
+        "z": "656ec99066bb254b",
+        "name": "db_storage",
+        "func": "var valeur = msg.payload;\nvar date = new Date();\n\nmsg.payload={};\nmsg.payload.hr = valeur;\nmsg.payload.newDate= date;\n\nmsg.topic=\"INSERT INTO hr VALUES (:hr,:newDate);\"\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 440,
+        "wires": [
+            [
+                "e9fda50546c80eb3"
+            ]
+        ]
+    },
+    {
+        "id": "5c57d4259a4f9023",
+        "type": "function",
+        "z": "656ec99066bb254b",
+        "name": "reset_chart",
+        "func": "msg.payload = [];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "3601f308a0ae09aa"
+            ]
+        ]
+    },
+    {
+        "id": "e9182e261d4c7ee5",
+        "type": "ui_button",
+        "z": "656ec99066bb254b",
+        "name": "",
+        "group": "64a604739ca1d9d6",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "RESET",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "5c57d4259a4f9023"
+            ]
+        ]
+    },
+    {
+        "id": "b238585077815ed1",
+        "type": "ui_date_picker",
+        "z": "656ec99066bb254b",
+        "name": "",
+        "label": "Date de Début",
+        "group": "f1e03b8deceb5b49",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 160,
+        "y": 660,
+        "wires": [
+            [
+                "07f61c0a986dc039"
+            ]
+        ]
+    },
+    {
+        "id": "6f060349de230187",
+        "type": "ui_slider",
+        "z": "656ec99066bb254b",
+        "name": "",
+        "label": "Heure de Début",
+        "tooltip": "",
+        "group": "f1e03b8deceb5b49",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "23",
+        "step": 1,
+        "className": "",
+        "x": 160,
+        "y": 740,
+        "wires": [
+            [
+                "d4ec4a9ee3a4c03e"
+            ]
+        ]
+    },
+    {
+        "id": "07f61c0a986dc039",
+        "type": "function",
+        "z": "656ec99066bb254b",
+        "name": "get_calendar",
+        "func": "var date = {}\ndate.payload = new Date(msg.payload).toISOString().slice(0,10)\nreturn date",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 660,
+        "wires": [
+            [
+                "d4ec4a9ee3a4c03e"
+            ]
+        ]
+    },
+    {
+        "id": "3601f308a0ae09aa",
+        "type": "ui_chart",
+        "z": "656ec99066bb254b",
+        "name": "",
+        "group": "64a604739ca1d9d6",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Rythme cardiaque",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "180",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 710,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66f14218d9c02ad2",
+        "type": "ui_text",
+        "z": "656ec99066bb254b",
+        "group": "64a604739ca1d9d6",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Dernier rythme cardiaque enregistré",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 770,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d4ec4a9ee3a4c03e",
+        "type": "join",
+        "z": "656ec99066bb254b",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 500,
+        "y": 740,
+        "wires": [
+            [
+                "fb43d860b547f038"
+            ]
+        ]
+    },
+    {
+        "id": "fb43d860b547f038",
+        "type": "function",
+        "z": "656ec99066bb254b",
+        "name": "merge_date_and_time",
+        "func": "var found_date = 0\nvar found_time = 0\n\nvar left = msg.payload[0]\nleft = left.toString()\nvar len_left = left.length\n\nvar right = msg.payload[1]\nright = right.toString()\nvar len_right = right.length\n\nif (len_left == 10 || len_right == 10){\n    found_date = 1\n}\n\nif ((len_left == 1 || len_left == 2) || (len_right == 1 || len_right == 2)){\n    found_time = 1\n}\n\nif(found_date == 1 && found_time == 1){\n    var date = \"deb_\"\n    var time\n    if(len_left == 10){\n        date += left\n        time = right\n    }\n    else{\n        date += right\n        time = left\n    }\n\n    if(time.length == 1){\n        date += \" 0\"\n    }\n    else{\n        date += \" \"\n    }\n\n    date += time.toString()\n    date += \":00:00\"\n\n    var res = {}\n    res.payload = date\n    return res\n\n}\nelse{\n    return null\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 740,
+        "wires": [
+            [
+                "aa35853989453978"
+            ]
+        ]
+    },
+    {
+        "id": "5ca5a2f5015bfc45",
+        "type": "mysql",
+        "z": "656ec99066bb254b",
+        "mydb": "8c51400d8db2d38c",
+        "name": "db_conn",
+        "x": 1300,
+        "y": 740,
+        "wires": [
+            [
+                "3fdb30b9de0a4f5b"
+            ]
+        ]
+    },
+    {
+        "id": "15364b4fcac6f4f5",
+        "type": "function",
+        "z": "656ec99066bb254b",
+        "name": "reset_chart",
+        "func": "msg.payload = [];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 840,
+        "wires": [
+            [
+                "be658a05daafe394"
+            ]
+        ]
+    },
+    {
+        "id": "bddac4593105e165",
+        "type": "ui_button",
+        "z": "656ec99066bb254b",
+        "name": "",
+        "group": "f1e03b8deceb5b49",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "RESET",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1300,
+        "y": 840,
+        "wires": [
+            [
+                "15364b4fcac6f4f5"
+            ]
+        ]
+    },
+    {
+        "id": "2b8804902eec61a5",
+        "type": "ui_date_picker",
+        "z": "656ec99066bb254b",
+        "name": "",
+        "label": "Date de Fin",
+        "group": "f1e03b8deceb5b49",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 150,
+        "y": 920,
+        "wires": [
+            [
+                "47f84b7151bee43c"
+            ]
+        ]
+    },
+    {
+        "id": "0e739cf6189691a4",
+        "type": "ui_slider",
+        "z": "656ec99066bb254b",
+        "name": "",
+        "label": "Heure de Fin",
+        "tooltip": "",
+        "group": "f1e03b8deceb5b49",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "23",
+        "step": 1,
+        "className": "",
+        "x": 150,
+        "y": 1000,
+        "wires": [
+            [
+                "5b2260bccfa24755"
+            ]
+        ]
+    },
+    {
+        "id": "47f84b7151bee43c",
+        "type": "function",
+        "z": "656ec99066bb254b",
+        "name": "get_calendar",
+        "func": "var date = {}\ndate.payload = new Date(msg.payload).toISOString().slice(0,10)\nreturn date",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 920,
+        "wires": [
+            [
+                "5b2260bccfa24755"
+            ]
+        ]
+    },
+    {
+        "id": "5b2260bccfa24755",
+        "type": "join",
+        "z": "656ec99066bb254b",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 500,
+        "y": 1000,
+        "wires": [
+            [
+                "389433432d03956a"
+            ]
+        ]
+    },
+    {
+        "id": "389433432d03956a",
+        "type": "function",
+        "z": "656ec99066bb254b",
+        "name": "merge_date_and_time",
+        "func": "var found_date = 0\nvar found_time = 0\n\nvar left = msg.payload[0]\nleft = left.toString()\nvar len_left = left.length\n\nvar right = msg.payload[1]\nright = right.toString()\nvar len_right = right.length\n\nif (len_left == 10 || len_right == 10){\n    found_date = 1\n}\n\nif ((len_left == 1 || len_left == 2) || (len_right == 1 || len_right == 2)){\n    found_time = 1\n}\n\nif(found_date == 1 && found_time == 1){\n    var date = \"fin_\"\n    var time\n    if(len_left == 10){\n        date += left\n        time = right\n    }\n    else{\n        date += right\n        time = left\n    }\n\n    if(time.length == 1){\n        date += \" 0\"\n    }\n    else{\n        date += \" \"\n    }\n\n    date += time.toString()\n    date += \":00:00\"\n\n    var res = {}\n    res.payload = date\n    return res\n\n}\nelse{\n    return null\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1000,
+        "wires": [
+            [
+                "aa35853989453978"
+            ]
+        ]
+    },
+    {
+        "id": "5445e64a833df3c5",
+        "type": "function",
+        "z": "656ec99066bb254b",
+        "name": "db_request",
+        "func": "var date_debut = \"\"\nvar date_fin = \"\"\n\nvar tmp1 = msg.payload[0].split(\"_\")\nvar tmp2 = msg.payload[1].split(\"_\")\n\nif(tmp1[0] == \"deb\"){\n    date_debut = tmp1[1]\n}\nelse if(tmp1[0] == \"fin\"){\n    date_fin = tmp1[1]\n}\n\nif (tmp2[0] == \"deb\" && date_debut == \"\") {\n    date_debut = tmp2[1]\n}\nelse if (tmp2[0] == \"fin\" && date_fin == \"\") {\n    date_fin = tmp2[1]\n}\n\nvar query = \"SELECT * FROM hr WHERE date > '\"\nquery += date_debut\nquery += \"' AND date < '\"\nquery += date_fin\nquery += \"';\"\n\nvar res = {}\nres.topic = query\nreturn res;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 740,
+        "wires": [
+            [
+                "5ca5a2f5015bfc45"
+            ]
+        ]
+    },
+    {
+        "id": "aa35853989453978",
+        "type": "join",
+        "z": "656ec99066bb254b",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 920,
+        "y": 740,
+        "wires": [
+            [
+                "5445e64a833df3c5"
+            ]
+        ]
+    },
+    {
+        "id": "3fdb30b9de0a4f5b",
+        "type": "function",
+        "z": "656ec99066bb254b",
+        "name": "request_result",
+        "func": "var histo = {};\n\nvar buf = msg;\nvar charge = new Array();\nvar test = new Array();\nvar data = new Array();\n\nbuf.payload.forEach((element) =>{\n    let datum = {\n        \"x\":(element.date).getTime(),\n        \"y\":element.value\n\n    }\n    data.push(datum);\n\n});\n\ntest.push(data)\n\nlet orga = {\n    \"series\":[\"A\"],\n    \"data\": test,\n    \"labels\":[\"hr\"]\n}\n\ncharge.push(orga)\nbuf.payload = charge;\nreturn buf;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 740,
+        "wires": [
+            [
+                "be658a05daafe394"
+            ]
+        ]
+    }
+]
